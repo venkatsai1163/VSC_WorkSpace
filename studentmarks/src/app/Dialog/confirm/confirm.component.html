@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Confirmation</h1>
+<div mat-dialog-content>
+  <p>Are you sure you want to delete data with Student_Id=<strong>{{data.id}}</strong></p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="cancle()" cdkFocusInitial>Cancle</button>
+  <button mat-raised-button color="primary" (click)="delete()">Confirm</button>
+</div>

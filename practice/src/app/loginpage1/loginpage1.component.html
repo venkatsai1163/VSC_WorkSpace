@@ -1,0 +1,44 @@
+<body>
+    <div class="heading">
+        <h1>Login</h1>
+    </div>
+    <form [formGroup]="loginform">
+        <div class="icon">
+            <mat-icon  aria-label="Example home icon">person</mat-icon>
+        </div>
+
+        <div class="fields">
+            <div class="infields">
+            <mat-form-field >
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email" placeholder="Eg: xyz@gmail.com">
+
+                <mat-error *ngIf="loginform.get('email')?.errors?.['required']">
+                    Email is <strong>required</strong>
+                </mat-error>
+
+                <mat-error *ngIf="loginform.get('email')?.errors?.['email'] ">
+                    <strong>Invalid</strong> email 
+                </mat-error>
+
+            </mat-form-field>
+            <br>
+            <mat-form-field >
+                <mat-label>Passward</mat-label>
+                <input matInput type="passward" formControlName="passward">
+
+                <mat-error *ngIf="loginform.get('passward')?.errors?.['required']">
+                    Passward is <strong>required</strong>
+                </mat-error>
+
+                <mat-error *ngIf="loginform.get('passward')?.errors?.['passwardError']">
+                    <strong>Invalid</strong> passoward
+                </mat-error>
+
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+            </div>
+        </div>
+    </form>
+</body>

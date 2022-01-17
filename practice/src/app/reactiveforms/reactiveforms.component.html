@@ -1,0 +1,10 @@
+<body>
+<form [formGroup]="reactiveform">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="name" name="name">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+</form>
+</body>

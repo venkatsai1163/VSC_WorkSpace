@@ -1,0 +1,73 @@
+<h1 mat-dialog-title>Student Marks</h1>
+<form [formGroup]="createform">
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Student Name</mat-label>
+    <input matInput formControlName="name" >
+    <mat-error *ngIf="createform.controls?.['name']?.errors?.['required']">
+        Student name is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="createform.controls?.['name']?.errors?.['minlength']">
+       Must contain atleast <strong>3</strong> characters
+    </mat-error>
+    <mat-error *ngIf="createform.controls?.['name']?.errors?.['maxlength']">
+        Must contain atmost <strong>25</strong> characters
+     </mat-error>
+     <mat-error *ngIf="createform.controls?.['name']?.errors?.['pattern']
+     && !createform.controls?.['name']?.errors?.['maxlength'] && !createform.controls?.['name']?.errors?.['minlength']">
+        Name must not contain <strong>numbers or special characters</strong>
+     </mat-error>
+  </mat-form-field>
+<br>
+  <mat-form-field appearance="fill">
+    <mat-label>Student Id (readOnly)</mat-label>
+    <input matInput formControlName="id" type="number" readonly>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Mark1</mat-label>
+    <input matInput formControlName="mark1" type="number">
+    <mat-error *ngIf="createform.controls?.['mark1']?.errors?.['required']">
+        Mark1  is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="createform.controls?.['mark1']?.errors?.['min']">
+        Minimum mark  is <strong>0</strong>
+      </mat-error>
+      <mat-error *ngIf="createform.controls?.['mark1']?.errors?.['max']">
+        Maximum mark  is <strong>100</strong>
+      </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Mark2</mat-label>
+    <input matInput formControlName="mark2" type="number">
+    <mat-error *ngIf="createform.controls?.['mark2']?.errors?.['required']">
+        Mark2 is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="createform.controls?.['mark2']?.errors?.['min']">
+        Minimum mark  is <strong>0</strong>
+      </mat-error>
+      <mat-error *ngIf="createform.controls?.['mark2']?.errors?.['max']">
+        Maximum mark  is <strong>100</strong>
+      </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Mark3</mat-label>
+    <input matInput formControlName="mark3" type="number">
+    <mat-error *ngIf="createform.controls?.['mark3']?.errors?.['required']">
+        Mark3  is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="createform.controls?.['mark3']?.errors?.['min']">
+        Minimum mark  is <strong>0</strong>
+      </mat-error>
+      <mat-error *ngIf="createform.controls?.['mark3']?.errors?.['max']">
+        Maximum mark  is <strong>100</strong>
+      </mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="close()">Cancle</button>
+  <button mat-raised-button color="primary"  (click)="update()" cdkFocusInitial>Update</button>
+</div>
+</form>

@@ -1,0 +1,113 @@
+.icon mat-icon{
+    font-size:1500%;
+    color: rgb(31, 29, 29);
+}
+
+body{
+    position: relative;
+}
+
+.fields{
+    position: absolute;
+    box-shadow: 3px 3px rgb(184, 178, 178),2px 2px 30px rgb(68, 61, 61);
+    border-radius: 10%;
+    right: 40%;
+    width: 25%;
+    height: 60%;
+    top:15%;
+    background-image: linear-gradient(red,wheat);
+}
+
+mat-form-field{
+    margin-left: 7%;
+    width: 85%;
+    margin-bottom: 3%;
+}
+
+.infields{
+    margin-top: 60%;
+}
+
+.icon{
+    position: absolute;
+    right: 57.5%;
+    top:20%;
+    z-index: 1;
+}
+
+button{
+    margin-left: 7%;
+    margin-top: 5%;
+    width: 85%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading{
+    position: absolute;
+    right: 50.5%;
+    top:17%;
+    z-index: 1;
+}
+
+h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 2px 3px rgb(134, 130, 130),3px 3px 5px rgb(114, 88, 88);
+}
+
+.eachfield{
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1400px){
+
+    .icon mat-icon{
+        font-size:1200%;
+    }
+
+    .icon{
+        position: absolute;
+        right: 52%;
+        top:20%;
+    }
+
+    .fields{
+        position: absolute;
+        box-shadow: 3px 3px rgb(184, 178, 178),2px 2px 30px rgb(68, 61, 61);
+        border-radius: 10%;
+        right: 35%;
+        width: 25%;
+        height: 55%;
+        top:15%
+    }
+
+    .heading{
+        position: absolute;
+        right: 45.15%;
+        top:17%;
+    }
+
+}
+
+@media screen and (max-width: 1250px){
+
+
+    .heading{
+        position: absolute;
+        right: 44.5%;
+        top:17%;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+
+    .icon mat-icon{
+        font-size:1100%;
+    }
+
+    .icon{
+        position: absolute;
+        right: 51.5%;
+        top:20%;
+    }
+}

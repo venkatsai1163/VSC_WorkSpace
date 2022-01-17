@@ -1,0 +1,39 @@
+<body>
+<form class="TempForm" #form="ngForm">
+
+    <div>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>First name</mat-label>
+        <input matInput name="name" ngModel #namemod=ngModel [(ngModel)]="value" required pattern="[a-zA-Z]*" minlength="3" maxlength="25">
+        <mat-error *ngIf="namemod.control.errors?.['required']">
+            Name is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="namemod.control.errors?.['pattern'] && !namemod.control.errors?.['minlength']">
+            Should contain only letters
+        </mat-error>
+        <mat-error *ngIf="namemod.control.errors?.['minlength']">
+            Should contain atleast 3 charcters
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div ngModelGroup="address">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Last name</mat-label>
+            <input matInput name="last" ngModel #lastmod=ngModel  required pattern="[a-zA-Z]*" minlength="3" maxlength="25">
+            <mat-error *ngIf="lastmod.control.errors?.['required']">
+                Name is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="lastmod.control.errors?.['pattern'] && !lastmod.control.errors?.['minlength']">
+                Should contain only letters
+            </mat-error>
+            <mat-error *ngIf="lastmod.control.errors?.['minlength']">
+                Should contain atleast 3 charcters
+            </mat-error>
+          </mat-form-field>
+    </div>
+
+      <button mat-raised-button color="primary" (click)="submit(form)">Submit</button>
+
+</form>
+</body>

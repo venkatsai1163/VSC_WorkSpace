@@ -1,0 +1,38 @@
+body{
+    margin: 0%;
+    position: relative;
+    background-image:linear-gradient(to bottom right,rgb(92, 71, 71),rgb(214, 62, 88));
+}
+.button{
+    position: absolute;
+    top:8%;
+    right: 10px;
+    margin: 5px;
+}
+.table{
+   position: absolute;
+   width: 100%;
+   top: 15%;
+}
+
+table{
+    width: 98%;
+    margin: auto;
+}
+
+.title{
+  position: absolute;
+  right: 40%;
+  top:2%;
+}
+
+.title h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(226, 214, 214);
+    text-shadow: 2px 2px gray,1px 1px 10px pink;
+}
+
+mat-paginator{
+    width: 98%;
+    margin: auto;
+}
